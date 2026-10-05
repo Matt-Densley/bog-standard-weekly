@@ -3,7 +3,7 @@
   "weekEnd": "2026-10-04",
   "range": "Mon 28 Sept to Sun 4 Oct 2026",
   "status": "provisional",
-  "drawnAt": "2026-10-05T22:44:06.988Z",
+  "drawnAt": "2026-10-05T23:05:35.739Z",
   "drawnFrom": "https://bogstandard.uk",
   "figuresFrom": "https://api.bogstandard.uk",
   "webFontsLoaded": true,
@@ -125,6 +125,9 @@
     }
   ],
   "skipped": [],
+  "warnings": [
+    "On the cover, \"Northumbrian Water\" is cut short."
+  ],
   "captions": {
     "instagram": "Last week, company by company: Mon 28 Sept to Sun 4 Oct 2026.\n\nSwipe for each water company’s week: the rain in its area, and the hours its storm overflows reported discharging.\n\nRanked by time per overflow monitor each company runs:\n1. United Utilities · 51 min per overflow · 25.8 mm of rain\n2. South West Water · 43 min per overflow · 24.7 mm of rain\n3. Northumbrian Water · 10 min per overflow · 8.8 mm of rain\n4. Severn Trent Water · 7 min per overflow · 1.6 mm of rain\n5. Anglian Water · 7 min per overflow · 1.5 mm of rain\n6. Southern Water · 7 min per overflow · 6.5 mm of rain\n7. Yorkshire Water · 4 min per overflow · 5.2 mm of rain\n8. Wessex Water · 4 min per overflow · 7.9 mm of rain\n9. Thames Water · 3 min per overflow · 3.1 mm of rain\n\nWetter areas see more spills, so read the rain and the hours together. Heavy rain is when storm overflows are allowed to operate.\n\nProvisional figures, from our record of the water companies’ live feeds. Hours, not volume: monitors record how long, not how much. A discharge report is not by itself proof of a permit breach. England only.\n\nEvery company’s week: bogstandard.uk/week (link in bio)\n\n#StormOverflows #BogStandard #Rivers #WaterCompanies",
     "x": "Last week’s storm overflows, company by company (28 Sept to 4 Oct).\n\nMost time per overflow: United Utilities, 51 min, with 25.8 mm of rain in its area.\n\nProvisional. Hours, not volume. Not by itself proof of a permit breach.\n\nbogstandard.uk/week"
