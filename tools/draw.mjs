@@ -118,6 +118,11 @@ async function photograph(context, address, mustSay){
         strokes: fit ? fit.querySelectorAll('.ws-draw > *').length : 0,
         fonts: !!document.fonts && document.fonts.check('700 20px Caveat') && document.fonts.check('900 52px "Big Shoulders Display"'),
         images: [...document.images].every(img => img.naturalWidth > 0),
+        // one-line labels the sheet has had to cut short with "…" (their text is wider than their box)
+        cut: fit ? [...fit.querySelectorAll('.wc-name, .wc-meta, .ws-title')].filter(node => {
+          const range = document.createRange(); range.selectNodeContents(node);
+          return getComputedStyle(node).textOverflow === 'ellipsis' && range.getBoundingClientRect().width > node.getBoundingClientRect().width + 0.05;
+        }).map(node => node.textContent.trim()) : [],
       };
     });
     if(!state.only) throw new Error('the page fell back to its full view, so there is no sheet to photograph');
@@ -127,7 +132,7 @@ async function photograph(context, address, mustSay){
     if(!state.images) throw new Error('the logo on the sheet did not load');
     const shot = await page.locator('.ws-fit').screenshot({ type: 'png' });
     const picture = await sharp(shot).resize({ width: WIDTH, height: HEIGHT, fit: 'contain', background: PAPER }).flatten({ background: PAPER }).png({ compressionLevel: 9 }).toBuffer();
-    return { picture, alt: state.alt, fonts: state.fonts, page };
+    return { picture, alt: state.alt, fonts: state.fonts, cut: state.cut, page };
   } catch(err){
     await page.close();
     throw err;
@@ -186,7 +191,7 @@ async function run(){
   await fs.writeFile(path.join(dir, 'data', 'list.json'), list.text);
 
   const { browser, context } = await openBrowser();
-  const slides = [], skipped = [];
+  const slides = [], skipped = [], warnings = [];
   let cover = null, fontsOk = true;
   try{
     // The cover first: it also hands back the site's own formatting of the ranking.
@@ -200,6 +205,7 @@ async function run(){
     await shot.page.close();
     if(!saidRange.includes(cover.range)) throw new Error(`the cover on the site is for a different week than the API's latest (${cover.range})`);
     fontsOk = fontsOk && shot.fonts;
+    for(const text of shot.cut) warnings.push(`On the cover, "${text}" is cut short.`);
     await fs.writeFile(path.join(dir, '01-cover.png'), shot.picture);
     slides.push({ n: 1, file: '01-cover.png', what: 'cover', alt: shot.alt });
 
@@ -212,6 +218,7 @@ async function run(){
         const s = await photograph(context, `${SITE}/company/${row.slug}/week/${week}?only=sheet`, [row.company, cover.range]);
         await s.page.close();
         fontsOk = fontsOk && s.fonts;
+        for(const text of s.cut) warnings.push(`On ${row.company}'s sheet, "${text}" is cut short.`);
         await fs.writeFile(path.join(dir, file), s.picture);
         slides.push({ n, file, what: 'company', company: row.company, slug: row.slug, rank: i + 1, final: !!row.final, partWeek: !!row.incomplete, alt: s.alt });
       } catch(err){
@@ -230,6 +237,8 @@ async function run(){
     drawnAt: now(), drawnFrom: SITE, figuresFrom: FIXTURES ? 'saved reports (a test run)' : API,
     webFontsLoaded: fontsOk,
     slides, skipped,
+    // Things a person should look at before the carousel is queued. An empty list is a clean run.
+    warnings: [...warnings, ...(fontsOk ? [] : ['The web fonts did not load, so the sheets are drawn in stand-in fonts.'])],
     captions: text,
     notes: [
       'Every picture is the site\'s own sheet, photographed. The captions are filled in by the site\'s own formatting code.',
@@ -239,8 +248,8 @@ async function run(){
   await fs.writeFile(path.join(dir, 'index.json'), `${JSON.stringify(index, null, 2)}\n`);
   await fs.writeFile(path.join(dir, 'caption-instagram.txt'), `${text.instagram}\n`);
   await fs.writeFile(path.join(dir, 'caption-x.txt'), `${text.x}\n`);
-  await fs.writeFile(path.join(OUT, 'latest.json'), `${JSON.stringify({ week, index: `${RAW}/weeks/${week}/index.json`, drawnAt: index.drawnAt, status: index.status, slides: slides.length, skipped: skipped.length }, null, 2)}\n`);
-  return { week, drawn: slides.length, skipped, webFontsLoaded: fontsOk, status: index.status };
+  await fs.writeFile(path.join(OUT, 'latest.json'), `${JSON.stringify({ week, index: `${RAW}/weeks/${week}/index.json`, drawnAt: index.drawnAt, status: index.status, slides: slides.length, skipped: skipped.length, warnings: index.warnings.length }, null, 2)}\n`);
+  return { week, drawn: slides.length, skipped, warnings: index.warnings, webFontsLoaded: fontsOk, status: index.status };
 }
 
 let result;
