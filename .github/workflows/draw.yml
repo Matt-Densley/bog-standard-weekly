@@ -1,0 +1,42 @@
+name: Draw the week
+
+# Photographs last week's sheets from the live site (bogstandard.uk) and saves them here as
+# pictures for the Monday carousel. It posts nothing: it only adds files to this repository.
+# Run it by hand from the Actions tab ("Run workflow"). There is no timer on it yet.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: draw
+  cancel-in-progress: false
+
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Draw the sheets
+        run: node tools/draw.mjs
+      - name: Save what was drawn (and how the run went, even if it failed)
+        if: always()
+        run: |
+          git config user.name "bog-standard-weekly"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A weeks latest.json last-run.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Nothing new to save."
+          else
+            git commit -m "Draw the week: $(node -p "try{const r=require('./last-run.json'); r.ok ? r.week+' ('+r.drawn+' sheets, '+r.status+')' : 'failed: '+r.error}catch(e){'no result'}")"
+            git pull --rebase --quiet
+            git push
+          fi
