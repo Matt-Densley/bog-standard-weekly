@@ -2,8 +2,8 @@
   "week": "2026-09-28",
   "weekEnd": "2026-10-04",
   "range": "Mon 28 Sept to Sun 4 Oct 2026",
-  "status": "provisional",
-  "drawnAt": "2026-10-05T23:05:35.739Z",
+  "status": "final",
+  "drawnAt": "2026-10-06T06:09:24.254Z",
   "drawnFrom": "https://bogstandard.uk",
   "figuresFrom": "https://api.bogstandard.uk",
   "webFontsLoaded": true,
@@ -12,7 +12,7 @@
       "n": 1,
       "file": "01-cover.png",
       "what": "cover",
-      "alt": "A hand-drawn sheet ranking 9 English water companies for Mon 28 Sept to Sun 4 Oct 2026 by hours of reported discharges per overflow monitor, with each area’s rain beside it. 1, United Utilities: 51 min per overflow, 25.8 mm of rain. 2, South West Water: 43 min per overflow, 24.7 mm of rain. 3, Northumbrian Water: 10 min per overflow, 8.8 mm of rain. 4, Severn Trent Water: 7 min per overflow, 1.6 mm of rain. 5, Anglian Water: 7 min per overflow, 1.5 mm of rain. 6, Southern Water: 7 min per overflow, 6.5 mm of rain. 7, Yorkshire Water: 4 min per overflow, 5.2 mm of rain. 8, Wessex Water: 4 min per overflow, 7.9 mm of rain. 9, Thames Water: 3 min per overflow, 3.1 mm of rain. Provisional figures. The same figures are in the list at bogstandard.uk/week.",
+      "alt": "A hand-drawn sheet ranking 9 English water companies for Mon 28 Sept to Sun 4 Oct 2026 by hours of reported discharges per overflow monitor, with each area’s rain beside it. 1, United Utilities: 51 min per overflow, 25.8 mm of rain. 2, South West Water: 43 min per overflow, 24.7 mm of rain. 3, Northumbrian Water: 10 min per overflow, 8.8 mm of rain. 4, Severn Trent Water: 7 min per overflow, 1.6 mm of rain. 5, Anglian Water: 7 min per overflow, 1.5 mm of rain. 6, Southern Water: 7 min per overflow, 6.5 mm of rain. 7, Yorkshire Water: 4 min per overflow, 5.3 mm of rain. 8, Wessex Water: 4 min per overflow, 7.9 mm of rain. 9, Thames Water: 3 min per overflow, 3.1 mm of rain. The same figures are in the list at bogstandard.uk/week.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/01-cover.png"
     },
     {
@@ -22,7 +22,7 @@
       "company": "United Utilities",
       "slug": "united-utilities",
       "rank": 1,
-      "final": false,
+      "final": true,
       "partWeek": false,
       "alt": "A hand-drawn sheet for United Utilities, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 465 of United Utilities’ 2,254 monitored storm overflows reported a discharge, for 1,915 hours between them. The Environment Agency’s rain gauges in its area averaged 25.8 mm. 15 possible dry-day spills flagged. The figures are in the tables below.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/02-united-utilities.png"
@@ -34,7 +34,7 @@
       "company": "South West Water",
       "slug": "south-west",
       "rank": 2,
-      "final": false,
+      "final": true,
       "partWeek": false,
       "alt": "A hand-drawn sheet for South West Water, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 354 of South West Water’s 1,342 monitored storm overflows reported a discharge, for 961 hours between them. The Environment Agency’s rain gauges in its area averaged 24.7 mm. 14 possible dry-day spills flagged. The figures are in the tables below.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/03-south-west.png"
@@ -46,7 +46,7 @@
       "company": "Northumbrian Water",
       "slug": "northumbrian",
       "rank": 3,
-      "final": false,
+      "final": true,
       "partWeek": false,
       "alt": "A hand-drawn sheet for Northumbrian Water, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 155 of Northumbrian Water’s 1,575 monitored storm overflows reported a discharge, for 259 hours between them. The Environment Agency’s rain gauges in its area averaged 8.8 mm. 10 possible dry-day spills flagged. The figures are in the tables below.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/04-northumbrian.png"
@@ -58,7 +58,7 @@
       "company": "Severn Trent Water",
       "slug": "severn-trent",
       "rank": 4,
-      "final": false,
+      "final": true,
       "partWeek": false,
       "alt": "A hand-drawn sheet for Severn Trent Water, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 90 of Severn Trent Water’s 2,418 monitored storm overflows reported a discharge, for 288 hours between them. The Environment Agency’s rain gauges in its area averaged 1.6 mm. 36 possible dry-day spills flagged. The figures are in the tables below.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/05-severn-trent.png"
@@ -70,7 +70,7 @@
       "company": "Anglian Water",
       "slug": "anglian",
       "rank": 5,
-      "final": false,
+      "final": true,
       "partWeek": false,
       "alt": "A hand-drawn sheet for Anglian Water, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 36 of Anglian Water’s 1,438 monitored storm overflows reported a discharge, for 159 hours between them. The Environment Agency’s rain gauges in its area averaged 1.5 mm. 24 possible dry-day spills flagged. The figures are in the tables below.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/06-anglian.png"
@@ -82,7 +82,7 @@
       "company": "Southern Water",
       "slug": "southern",
       "rank": 6,
-      "final": false,
+      "final": true,
       "partWeek": false,
       "alt": "A hand-drawn sheet for Southern Water, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 33 of Southern Water’s 992 monitored storm overflows reported a discharge, for 105 hours between them. The Environment Agency’s rain gauges in its area averaged 6.5 mm. 10 possible dry-day spills flagged. The figures are in the tables below.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/07-southern.png"
@@ -94,9 +94,9 @@
       "company": "Yorkshire Water",
       "slug": "yorkshire",
       "rank": 7,
-      "final": false,
+      "final": true,
       "partWeek": false,
-      "alt": "A hand-drawn sheet for Yorkshire Water, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 31 of Yorkshire Water’s 2,179 monitored storm overflows reported a discharge, for 156 hours between them. The Environment Agency’s rain gauges in its area averaged 5.2 mm. 7 possible dry-day spills flagged. The figures are in the tables below.",
+      "alt": "A hand-drawn sheet for Yorkshire Water, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 31 of Yorkshire Water’s 2,179 monitored storm overflows reported a discharge, for 156 hours between them. The Environment Agency’s rain gauges in its area averaged 5.3 mm. 7 possible dry-day spills flagged. The figures are in the tables below.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/08-yorkshire.png"
     },
     {
@@ -106,7 +106,7 @@
       "company": "Wessex Water",
       "slug": "wessex",
       "rank": 8,
-      "final": false,
+      "final": true,
       "partWeek": false,
       "alt": "A hand-drawn sheet for Wessex Water, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 51 of Wessex Water’s 1,283 monitored storm overflows reported a discharge, for 71.7 hours between them. The Environment Agency’s rain gauges in its area averaged 7.9 mm. The figures are in the tables below.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/09-wessex.png"
@@ -118,7 +118,7 @@
       "company": "Thames Water",
       "slug": "thames",
       "rank": 9,
-      "final": false,
+      "final": true,
       "partWeek": false,
       "alt": "A hand-drawn sheet for Thames Water, Mon 28 Sept to Sun 4 Oct 2026: rain each day hanging from a cloud line, hours of reported discharges each day rising from the ground. 6 of Thames Water’s 573 monitored storm overflows reported a discharge, for 28.6 hours between them. The Environment Agency’s rain gauges in its area averaged 3.1 mm. The figures are in the tables below.",
       "url": "https://raw.githubusercontent.com/Matt-Densley/bog-standard-weekly/main/weeks/2026-09-28/10-thames.png"
@@ -129,8 +129,8 @@
     "On the cover, \"Northumbrian Water\" is cut short."
   ],
   "captions": {
-    "instagram": "Last week, company by company: Mon 28 Sept to Sun 4 Oct 2026.\n\nSwipe for each water company’s week: the rain in its area, and the hours its storm overflows reported discharging.\n\nRanked by time per overflow monitor each company runs:\n1. United Utilities · 51 min per overflow · 25.8 mm of rain\n2. South West Water · 43 min per overflow · 24.7 mm of rain\n3. Northumbrian Water · 10 min per overflow · 8.8 mm of rain\n4. Severn Trent Water · 7 min per overflow · 1.6 mm of rain\n5. Anglian Water · 7 min per overflow · 1.5 mm of rain\n6. Southern Water · 7 min per overflow · 6.5 mm of rain\n7. Yorkshire Water · 4 min per overflow · 5.2 mm of rain\n8. Wessex Water · 4 min per overflow · 7.9 mm of rain\n9. Thames Water · 3 min per overflow · 3.1 mm of rain\n\nWetter areas see more spills, so read the rain and the hours together. Heavy rain is when storm overflows are allowed to operate.\n\nProvisional figures, from our record of the water companies’ live feeds. Hours, not volume: monitors record how long, not how much. A discharge report is not by itself proof of a permit breach. England only.\n\nEvery company’s week: bogstandard.uk/week (link in bio)\n\n#StormOverflows #BogStandard #Rivers #WaterCompanies",
-    "x": "Last week’s storm overflows, company by company (28 Sept to 4 Oct).\n\nMost time per overflow: United Utilities, 51 min, with 25.8 mm of rain in its area.\n\nProvisional. Hours, not volume. Not by itself proof of a permit breach.\n\nbogstandard.uk/week"
+    "instagram": "Last week, company by company: Mon 28 Sept to Sun 4 Oct 2026.\n\nSwipe for each water company’s week: the rain in its area, and the hours its storm overflows reported discharging.\n\nRanked by time per overflow monitor each company runs:\n1. United Utilities · 51 min per overflow · 25.8 mm of rain\n2. South West Water · 43 min per overflow · 24.7 mm of rain\n3. Northumbrian Water · 10 min per overflow · 8.8 mm of rain\n4. Severn Trent Water · 7 min per overflow · 1.6 mm of rain\n5. Anglian Water · 7 min per overflow · 1.5 mm of rain\n6. Southern Water · 7 min per overflow · 6.5 mm of rain\n7. Yorkshire Water · 4 min per overflow · 5.3 mm of rain\n8. Wessex Water · 4 min per overflow · 7.9 mm of rain\n9. Thames Water · 3 min per overflow · 3.1 mm of rain\n\nWetter areas see more spills, so read the rain and the hours together. Heavy rain is when storm overflows are allowed to operate.\n\nFinal figures for the week, from our record of the water companies’ live feeds. Hours, not volume: monitors record how long, not how much. A discharge report is not by itself proof of a permit breach. England only.\n\nEvery company’s week: bogstandard.uk/week (link in bio)\n\n#StormOverflows #BogStandard #Rivers #WaterCompanies",
+    "x": "Last week’s storm overflows, company by company (28 Sept to 4 Oct).\n\nMost time per overflow: United Utilities, 51 min, with 25.8 mm of rain in its area.\n\nFinal for the week. Hours, not volume. Not by itself proof of a permit breach.\n\nbogstandard.uk/week"
   },
   "notes": [
     "Every picture is the site's own sheet, photographed. The captions are filled in by the site's own formatting code.",
